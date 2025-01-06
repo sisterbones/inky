@@ -38,8 +38,7 @@ dependencies = [
     "numpy",
     "pillow",
     "smbus2",
-    "spidev",
-    "gpiodevice>=0.0.3"
+    "spidev"
 ]
 
 [tool.hatch.metadata.hooks.requirements_txt.optional-dependencies]
@@ -118,15 +117,4 @@ ignore = [
     'examples/*',
     '.coveragerc',
     'requirements-dev.txt'
-]
-
-[tool.pimoroni]
-apt_packages = []
-configtxt = [
-    "dtoverlay=i2c1",
-    "dtoverlay=i2c1-pi5",
-    "dtoverlay=spi0-0cs"
-]
-commands = [
-    "sudo raspi-config nonint do_spi 0"
 ]
